@@ -1,0 +1,58 @@
+{
+    "status": "ok",
+    "totalResults": 4,
+    "articles": [
+        {
+            "source": {
+                "id": "bbc-sport",
+                "name": "BBC Sport"
+            },
+            "author": "BBC Sport",
+            "title": "South Africa Women v Australia Women - Cricket - BBC Sport",
+            "description": "Find out the in depth batting and bowling figures for South Africa Women v Australia Women in the ICC Women's World Cup on BBC Sport.",
+            "url": "https://www.bbc.co.uk/sport/cricket/scorecard/ECKO49821",
+            "urlToImage": "https:////m.files.bbci.co.uk/modules/bbc-morph-sport-seo-meta/1.22.0/images/bbc-sport-logo.png",
+            "publishedAt": "2022-03-21T22:37:22.2322522Z",
+            "content": "<table><tr><th>Batter</th><th>How Out</th><th>Bowler</th><th>Runs</th><th>Balls</th><th>4s</th><th>6s</th><th>Mins</th><th>SR</th></tr>\r\n<tr><th>Total</th><th>(5.2 overs)</th><th>23-for0wickets</th><… [+1161 chars]"
+        },
+        {
+            "source": {
+                "id": "abc-news-au",
+                "name": "ABC News (AU)"
+            },
+            "author": "ABC News",
+            "title": "Women's ODI Cricket World Cup: Australia v South Africa live scores and stats",
+            "description": "Australia are chasing 271 against South Africa, with Meg Lanning recording a vital century. Earlier, Ash Gardner took one of the catches of the tournament to dismiss Mignon du Preez. Check out the live scores and stats in our ScoreCentre.",
+            "url": "http://www.abc.net.au/news/2022-03-22/cricket-scores-results-scorecard-odi-aus-v-sa/100928564",
+            "urlToImage": "https://live-production.wcms.abc-cdn.net.au/a24f8006bf62a1a0729f3f5b7d9ab6f5?impolicy=wcms_crop_resize&cropH=2813&cropW=5000&xPos=0&yPos=379&width=862&height=485",
+            "publishedAt": "2022-03-21T21:59:59Z",
+            "content": "Openers Healy (5) and Haynes (17) fell cheaply with Australia chasing 271 against South Africa in their Cricket World Cup contest in Wellington.\r\nThe Aussies are looking to maintain their 100 per cen… [+430 chars]"
+        },
+        {
+            "source": {
+                "id": "espn-cric-info",
+                "name": "ESPN Cric Info"
+            },
+            "author": null,
+            "title": "PCB hands Umar Akmal three-year ban from all cricket | ESPNcricinfo.com",
+            "description": "Penalty after the batsman pleaded guilty to not reporting corrupt approaches | ESPNcricinfo.com",
+            "url": "http://www.espncricinfo.com/story/_/id/29103103/pcb-hands-umar-akmal-three-year-ban-all-cricket",
+            "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1099495_800x450.jpg",
+            "publishedAt": "2020-04-27T11:41:47Z",
+            "content": "Umar Akmal's troubled cricket career has hit its biggest roadblock yet, with the PCB handing him a ban from all representative cricket for three years after he pleaded guilty of failing to report det… [+1506 chars]"
+        },
+        {
+            "source": {
+                "id": "espn-cric-info",
+                "name": "ESPN Cric Info"
+            },
+            "author": null,
+            "title": "What we learned from watching the 1992 World Cup final in full again | ESPNcricinfo.com",
+            "description": "Wides, lbw calls, swing - plenty of things were different in white-ball cricket back then | ESPNcricinfo.com",
+            "url": "http://www.espncricinfo.com/story/_/id/28970907/learned-watching-1992-world-cup-final-full-again",
+            "urlToImage": "https://a4.espncdn.com/combiner/i?img=%2Fi%2Fcricket%2Fcricinfo%2F1219926_1296x729.jpg",
+            "publishedAt": "2020-03-30T15:26:05Z",
+            "content": "Last week, we at ESPNcricinfo did something we have been thinking of doing for eight years now: pretend-live ball-by-ball commentary for a classic cricket match. We knew the result, yes, but we tried… [+6823 chars]"
+        }
+    ]
+}
