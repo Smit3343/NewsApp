@@ -32,7 +32,6 @@ export class News extends Component {
             ,isLoading:false,
             totalResults:parsedData.totalResults
         })
-        console.log(parsedData)
     }
     previousBtnClick=async()=>{
         let apiUrl=`https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=1f26e2d3eb2347d492fc076db19aeb26&page=${this.state.page-1}&pagesize=${this.props.pagesize}`;
@@ -53,7 +52,6 @@ export class News extends Component {
         
             let data=await fetch(apiUrl);
         let parsedData=await data.json();
-        console.log(parsedData)
         this.setState({
             articals:parsedData.articles,
             isLoading:false,
@@ -64,22 +62,28 @@ export class News extends Component {
         
     }
     render() {
-        console.log("render");
         return (
             <>
-            <div className='my-2'>
+            <div className='container my-2'>
                 <h3 className='text-center'>NewMonkey - top Headlines</h3>
                 {this.state.isLoading && <Spinner/>}
 
                 <div className="row">
                     {!this.state.isLoading && this.state.articals.map((element)=>{
                         return <div key={element.url} className="col-md-4">
-                        <NewsItem  title={element.title!=null?element.title.slice(0,45):""} imgUrl={element.urlToImage!=null?element.urlToImage:"https://amp.dev/static/img/sharing/docs-guide-600x314.png"} newsUrl={element.url} description={element.description!=null?element.description.slice(0,91):""} />
+                            <NewsItem
+                                title={element.title}
+                                imgUrl={element.urlToImage? element.urlToImage : "https://amp.dev/static/img/sharing/docs-guide-600x314.png"}
+                                newsUrl={element.url}
+                                description={element.description? element.description.slice(0, 91) : ""}
+                                publishedAt={element.publishedAt}
+                                author={element.author?element.author:""}
+                                source={element.source.name} />
                     </div>
                     })}
                 </div>
             </div>
-            <div className='d-flex justify-content-between my-5'>
+            <div className='container d-flex justify-content-between my-5'>
             <button type="button" disabled={this.state.page<=1} onClick={this.previousBtnClick}  className="btn btn-primary">&larr;previous</button>
             <button type="button" disabled={this.state.page+1>Math.ceil(this.state.totalResults/this.props.pagesize)} onClick={this.nextBtnClick} className="btn btn-primary">next&rarr;</button>
             </div>
