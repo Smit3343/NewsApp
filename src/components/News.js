@@ -48,28 +48,26 @@ export class News extends Component {
         this.updateNews();
     }
     fetchMoreData = async () => {
-        this.setState({
-            page: this.state.page + 1
-        })
-        let apiUrl = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page}&pagesize=${this.props.pagesize}`;
+        let apiUrl = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${this.props.apiKey}&page=${this.state.page+1}&pagesize=${this.props.pagesize}`;
         let data = await fetch(apiUrl);
         let parsedData = await data.json();
         this.setState({
             articals: this.state.articals.concat(parsedData.articles),
+            page: this.state.page + 1
         })
     };
     render() {
         return (
             <>
-                    <h3 className='text-center my-4'>NewMonkey - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h3>
-                    {this.state.isLoading && <Spinner/>}
-                    <InfiniteScroll
-                        dataLength={this.state.articals.length}
-                        next={this.fetchMoreData}
-                        hasMore={this.state.articals.length !== this.state.totalResults}
-                        loader={<Spinner />}
-                    >
-                        <div className='container'>
+                <h3 className='text-center my-4'>NewMonkey - Top {this.capitalizeFirstLetter(this.props.category)} Headlines</h3>
+                {this.state.isLoading && <Spinner />}
+                <InfiniteScroll
+                    dataLength={this.state.articals.length}
+                    next={this.fetchMoreData}
+                    hasMore={this.state.articals.length !== this.state.totalResults}
+                    loader={<Spinner />}
+                >
+                    <div className='container'>
                         <div className="row">
                             {this.state.articals.map((element) => {
                                 return <div key={element.url} className="col-md-4">
@@ -84,8 +82,8 @@ export class News extends Component {
                                 </div>
                             })}
                         </div>
-                        </div>
-                    </InfiniteScroll>
+                    </div>
+                </InfiniteScroll>
             </>
         )
     }
